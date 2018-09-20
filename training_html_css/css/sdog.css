@@ -1,20 +1,111 @@
+/* General styling */
 body {
-	background-color: #bbb;
-	padding: 2% 10% 2% 10%
+	background-color: #A49BC5;
+	background-color: #E3DCEE;
+	padding: 2% 10% 2% 10%;
+	color: white;
 }
 
 .back {
 	background-color: #F3E5F5;
+	background-color: #C4AECC;
 }
 
 .content {
-	padding: 5% 10% 5% 10%;
+	padding: 3% 10% 5% 10%;
 }
 
 h1 {
 	color: white;
 	text-align: center;
 	font-size: 64px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 38px;
+}
+
+p {
+	padding-bottom: 1%;
+}
+
+/* Menu area */
+.title {
+	padding-top: 2%;
+}
+
+header {
+	background-color: #CE93D8;
+	background-color: #7D5BB3;
+}
+
+footer {
+	background-color: #CE93D8;
+	padding: 1.5% 5% 1.5% 5%;
+}
+
+ul {
+	padding: 1% 1% 1% 1%;
+	list-style-type: none;
+	text-align: center;
+}
+
+li {
+	margin: 0 5% 0 5%;
+	display: inline;
+}
+
+
+li a {
+	font-size: 24px;
+	color: white;
+	padding-left: 2px;
+	text-decoration: none;
+}
+
+li a:hover {
+	padding: 5px 5px 5px 5px;
+	border: 2px solid white;
+}
+
+
+/* history section */
+
+.hpara {
+	float: left;
+	max-width: 58%;
+}
+
+.hdog {
+	float: right;
+}
+
+.hdog-img {
+	height: auto;
+	width: auto;
+	max-width: 300px;
+	max-height: 250px;
+	margin-bottom: 4%;
+}
+
+
+/* dog appearance section*/
+.apper {
+	clear: both;
+	margin-bottom: 3%;
+}
+
+.tbl {
+	align-items: center;
+	float: right;
+	margin-bottom: 4%;
+}
+
+
+.adog-img {
+	float: left;
+	align-items: center;
 }
 
 table {
@@ -32,32 +123,7 @@ tr, td {
 	font-size: 20px;
 }
 
-header {
-	background-color: #CE93D8;
+/* dog coat section (like its fur not dog jackets) */
+.co {
+	clear: both;
 }
-
-footer {
-	background-color: #CE93D8;
-	padding: 1.5% 5% 1.5% 5%;
-}
-
-ul {
-	
-}
-
-li {
-	list-style-type: none;
-}
-
-li a {
-	padding-right: 5px;
-	text-decoration: none;
-	border-right: 2px solid white;
-}
-
-li a:hover {
-	padding: 1px 1px 1px 1px;
-	color: white;
-	border: 2px solid white;
-}
-
