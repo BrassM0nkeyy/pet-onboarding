@@ -4,19 +4,28 @@ body {
 	background-color: #E3DCEE;
 	padding: 2% 10% 2% 10%;
 	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* class added when a section needs to clear 2 floating items */
+.clr {
+	clear: both;
 }
 
 .back {
-	background-color: #F3E5F5;
 	background-color: #C4AECC;
 }
 
 .content {
-	padding: 3% 10% 5% 10%;
+	margin: 3% 10% 5% 10%;
+}
+
+/* border at the bottom of each section */
+.section {
+	border-bottom: 4px solid #E3DCEE;
 }
 
 h1 {
-	color: white;
 	text-align: center;
 	font-size: 64px;
 }
@@ -36,14 +45,15 @@ p {
 }
 
 header {
-	background-color: #CE93D8;
 	background-color: #7D5BB3;
 }
 
 footer {
-	background-color: #CE93D8;
+	background-color: #7D5BB3;
+	text-align: center;
 	padding: 1.5% 5% 1.5% 5%;
 }
+
 
 ul {
 	padding: 1% 1% 1% 1%;
@@ -52,7 +62,7 @@ ul {
 }
 
 li {
-	margin: 0 5% 0 5%;
+	margin: 0 2% 0 2%;
 	display: inline;
 }
 
@@ -60,19 +70,32 @@ li {
 li a {
 	font-size: 24px;
 	color: white;
-	padding-left: 2px;
+	margin-left: 2px;
 	text-decoration: none;
+	border: 2px solid transparent;
+	padding: 0.5% 0.5% 0.5% 0.5%;
 }
 
 li a:hover {
-	padding: 5px 5px 5px 5px;
 	border: 2px solid white;
 }
 
+/* intro */
+
+iframe {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
 
 /* history section */
+.his {
+	overflow: hidden;
+}
 
-.hpara {
+.content .hpara {
 	float: left;
 	max-width: 58%;
 }
@@ -86,18 +109,17 @@ li a:hover {
 	width: auto;
 	max-width: 300px;
 	max-height: 250px;
-	margin-bottom: 4%;
+	margin-bottom: 4%; 
 }
 
 
 /* dog appearance section*/
 .apper {
-	clear: both;
-	margin-bottom: 3%;
+	overflow: hidden;
 }
 
 .tbl {
-	align-items: center;
+	display: inline-block;
 	float: right;
 	margin-bottom: 4%;
 }
@@ -105,13 +127,15 @@ li a:hover {
 
 .adog-img {
 	float: left;
-	align-items: center;
+	position: relative;
+	left: 5%
 }
 
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 25%;
+	clear: both;
 }
 
 tr, td {
@@ -124,6 +148,20 @@ tr, td {
 }
 
 /* dog coat section (like its fur not dog jackets) */
-.co {
-	clear: both;
+
+/* Temperament section */
+
+/* care section */
+.bath {
+	height: auto;
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 65%;
+	max-height: 40%;
+	margin-bottom: 3%;
 }
+
+/* form section */
+
