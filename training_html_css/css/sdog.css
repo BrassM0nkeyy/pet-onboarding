@@ -12,11 +12,16 @@ body {
 }
 
 .back {
+	border-radius: 10px;
 	background-color: #C4AECC;
 }
 
 .content {
 	margin: 3% 10% 5% 10%;
+}
+
+img, object, textarea {
+	max-width: 100%
 }
 
 /* border at the bottom of each section */
@@ -44,10 +49,14 @@ p {
 }
 
 header {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 	background-color: #7D5BB3;
 }
 
 footer {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 	background-color: #7D5BB3;
 	text-align: center;
 	padding: 1.5% 5% 1.5% 5%;
@@ -133,6 +142,8 @@ object {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	margin-right: auto;
+	margin-left: auto;
 	width: 25%;
 	clear: both;
 }
@@ -199,6 +210,68 @@ tr, td {
 	text-align: center;
 }
 
+/* Mobile version (I should have made it for moble first :/ )*/
+@media screen and (max-width: 720px){
+	
+	.content {
+		margin: 3% 2% 5% 2%;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: center;
+	}
+
+	li {
+		border-radius: 10px;
+		background-color: #411882;
+		margin: 2% 2% 2% 2%;
+		display: block;
+	}
+
+
+	li a {
+		font-size: 24px;
+		color: white;
+		margin-left: 2px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		border: none;
+	}
+
+	.content .hpara {
+		float: none;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.hdog {
+		text-align: center;
+		float: none;
+	}
+
+	table {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.tbl {
+		display: block;
+		float: none;
+		margin-bottom: 2%;
+	}
+
+
+	.adog-img {
+		float: none;
+		text-align: center;
+		left: 0;
+		margin-bottom: 4%;
+	}
+
+}
 
 
 
