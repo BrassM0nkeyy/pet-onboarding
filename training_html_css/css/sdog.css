@@ -1,6 +1,5 @@
 /* General styling */
 body {
-	background-color: #A49BC5;
 	background-color: #E3DCEE;
 	padding: 2% 10% 2% 10%;
 	color: white;
@@ -164,4 +163,43 @@ tr, td {
 }
 
 /* form section */
+.content form {
+	padding-top: 1%;
+	width: 80%;
+	margin: auto;
+}
+
+.content form label {
+	float: left;
+	width: 55%;
+}
+
+.content form textarea{
+	float: all;
+}
+
+.content form div {
+	text-align: center;
+	clear: left;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin: 0 0 2% 0;
+	border-radius: 5px;
+	background-color: #7D5BB3;
+
+}
+
+.submit {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.submit button{
+	font-size: 18px;
+	text-align: center;
+}
+
+
+
+
 

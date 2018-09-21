@@ -24,7 +24,7 @@
 					<li><a href="#coat">Coat</a></li>
 					<li><a href="#temperamnet">Temperament</a></li>
 					<li><a href="#care">Care</a></li>
-					<li><a href="#cform">Ask Us</a></li>
+					<li><a href="#CUs">Ask Us</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -110,47 +110,58 @@
 				<img class="bath" src="./images/maltesebath.jpg">
 			</div>
 
-			
+			<h2 id="CUs">Contact Us</h2>
+
+			<form method="post" action="my_script.php" id="cform" enctype="multipart/form-data">
+
+				<div class="hname">
+					<label for="hname">Your Name</label>
+					<input type="text" name="hname">
+				</div>
+
+				<div class="email">
+					<label for="email">Enter email</label>
+					<input type="email" name="email" required="required" placeholder="example@gmail.com">
+				</div>
+
+				<div class="ndog">
+					<label for="ndog">Pet's Name</label>
+					<input type="text" name="ndog">
+				</div>
+
+				<div class="gender">
+					<label for="gender">Pet's Gender</label>
+					<select>
+						<option value="na">N/A</option>
+						<option value="m">Male</option>
+						<option value="f">Female</option>
+					</select>
+				</div>
+
+				<div class="dage">
+					<label for="age">Pet's Age</label>
+					<input type="text" name="age">
+				</div>
+
+				<div class="message">
+					<label for="message">Message</label>
+					<textarea name="message" cols="75" rows="20"></textarea>
+				</div>
+
+				<div class="photo">
+					<label>Photo Upload</label>
+					<input type="file" name="photo" accept="image/*">
+				</div>
+
+				<div class="submit">
+					<button type="submit">Submit Message</button>
+				</div>
+
+			</form>
+
 		</div>
 
-		<form method="post" action="my_script.php" id="cform" enctype="multipart/form-data">
-			<div class="hname">
-				<label for="hname">Your Name</label>
-				<input type="text" name="hname">
-			</div>
-			<div>
-				<label for="email">Enter email</label>
-				<input type="email" name="email" required="required" placeholder="example@gmail.com">
-			</div>
-			<div class="ndog">
-				<label for="ndog">Pet's Name</label>
-				<input type="text" name="ndog">
-			</div>
-			<div class="gender">
-				<label for="gender">Pet's Gender</label>
-				<select>
-					<option value="na">N/A</option>
-					<option value="m">Male</option>
-					<option value="f">Female</option>
-				</select>
-			</div>
-			<div class="dage">
-				<label for="age">Pet's Age</label>
-				<input type="text" name="age">
-			</div>
-			<div class="message">
-				<label>Message</label>
-				<textarea name="message" cols="75" rows="20"></textarea>
-			</div>
-			<div class="photo">
-				<label>Photo Upload</label>
-				<input type="file" name="photo" accept="image/*">
-			</div>
-			<div class="submit">
-				<button type="submit">Submit Message</button>
-			</div>
-
-		</form>
+		
 
 
 		<footer>
