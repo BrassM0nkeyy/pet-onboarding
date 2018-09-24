@@ -1,9 +1,13 @@
-//comments
-console.log("hello world");
-console.log(123123);
-var ing = "hi";
-console.log(ing);
-console.log(1,2,3,4);
-console.error("this is some error");
-console.clear();
-console.warn('this is a warning');
+let val;
+
+const today = new Date();
+const birthday = new Date('1-15-1997');
+
+val = birthday;
+val = today.getMonth();
+val = today.getDay();
+val = today;
+val = today.getTime();
+
+
+console.log(val);
