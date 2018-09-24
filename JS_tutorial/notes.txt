@@ -1,0 +1,318 @@
+//var, let, const
+
+ chapter 2 Lesson 3
+// var name = "jeff jeffy";
+// console.log(name);
+// name = "steve smith";
+// console.log(name);
+
+// //init var
+// var greeting;
+// console.log(greeting);
+// greeting = "hi";
+// console.log(greeting);
+
+//variables can be letters, numbers, _ , $
+
+//LET
+// let name;
+// name = "jeff";
+// console.log(name);
+// name = "peter";
+// console.log(name);
+
+//CONST
+//objects are mutable but 
+// const name = "jerry";
+// console.log(name);
+// name = "sarah";
+//this doesnt work :0
+
+const person = {
+    name: "john" ,
+    age: 30
+}
+
+person.name = 'sarah';
+
+console.log(person);
+
+const numbers = [1, 2, 3, 4,];
+numbers.push(5);
+
+console.log(numbers);
+
+Chapter 2 Lesson 4
+
+//Data types
+//string number boolean null undefined symbols
+//ref types
+//arrays object literals functions dates
+//same var can hold multiple types 
+
+//String 
+ const name = "matt";
+ //number
+ const age = 32;
+ //boolean
+ const haskid = true;
+ //null
+ const car = null;
+ //undefined
+ let test;
+ //symbol
+ const sym = Symbol();
+
+ console.log(typeof sym);
+
+ Chapter 2 Lesson 5 (type converion)
+let val;
+
+//number to string
+val  = String(555);
+val = String(4+4);
+//bool to string
+val = String(true);
+//date to string
+val = String(new Date());
+//array to string
+val  = String([1,2,3,4]);
+
+//toString()
+    val = (5).toString();
+    val = (true).toString();
+
+//String to number 
+val = Number("5");
+
+//output
+console.log(val);
+console.log(typeof val);
+//console.log(val.length);
+console.log(val.toFixed());
+
+//if you try to parse something to be a number thats not you get NaN
+
+Chapter 2 Lesson 6 (Math)
+const num1 = 100;
+const num2 = 50;
+let val; 
+
+
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.3);
+val = Math.ceil(2.8);
+
+//this gives a random decimal
+val = Math.random()
+
+//solution multiply by the number u want to be the max
+//number from 1 to 20
+val = Math.floor(Math.random() * 20 + 1);
+
+//others include floor sqrt abs pow min max
+console.log(val);
+
+Chapter 2 Lesson 6 (String methods and Concatenation)
+const firstName = "Matt";
+const lastName = "Grech";
+
+let val;
+
+val = firstName +lastName;
+
+//concat
+val = firstName + ' ' + lastName;
+
+//append
+val = "brad ";
+val += "Traversy";
+
+//escaping use backslash 
+val = "that\'s awesome, I"
+
+//concat
+val = firstName.concat(" ", lastName);
+
+//change case
+val = firstName.toLocaleLowerCase();
+
+//accessing characters in string
+val  = firstName[2];
+
+//finds the first location of character in a string
+val = firstName. indexOf('a');
+
+//slice() splits it by character starting index to ending index
+
+//split() turns word into an array denoted by a delimiter
+sen = "hi my name is matt";
+val = sen.split(' ');
+
+//replace looks for a string and replaces it with another
+val = sen.replace("matt", "bob");
+
+console.log(val);
+
+Chapter 2 Lesson 7 (Template Literals)
+const name =  "Matt";
+const age  = "21";
+const job = "devops";
+const city = "toronto";
+
+//without template strings (es5)
+html  = '<ul><li>Name: ' + name + '</li><li>Age: ' + age;
+
+function hi(){
+    return "dead";
+}
+
+//with template strings
+html = `
+    <ul>
+        <li>name: ${name}</li>
+        <li>age: ${age}</li>
+        <li>job: ${job}</li>
+        <li>city: ${city}</li>
+        <li>is this boring ${hi()} bornign</li>
+    </ul>    
+`
+
+
+document.body.innerHTML = html;
+
+Chapter 2 Lesson 8 (arrays and array methods)
+//creat sme arrays 
+const numbers = [22, 13, 12, 50];
+const numbers2 = new Array(23, 44, 27, 3, 9, 88);
+let val;
+
+val = numbers.length;
+
+//isArray checks if it is an array
+
+//indexOf finds the index of an element
+val = numbers.indexOf(12);
+
+//Mutating arrays 
+//add to end
+numbers.push(250);
+
+//pop takes from end
+//shift takes off from front
+
+function under50(num){
+    return num < 50;
+}
+
+val = numbers.find(under50);
+
+console.log(numbers);
+console.log(val);
+
+chapter 2 Lesson 9 (object Literals)
+const person = {
+    firstName: "Matt",
+    lastName: "Grech",
+    age: "21",
+    email: "mgrech@ibm.com",
+    hobies: ['coding', 'video games', 'cars', 'jiu-jitsu'],
+    address: {
+        city: 'toronto',
+        prov: 'ON'
+    },
+
+    birthYear: function(){
+        return 2018 - this.age;
+    }
+}
+//you can add functions too
+
+let val;
+
+val = person;
+val = person.firstName;
+val = person.hobies[2];
+val = person.address.prov;
+val = person.birthYear();
+
+//use this. when refering to own object
+//you can make an array of objects
+
+console.log(val);
+
+Chapter 2 Lesson 10 (date and time)
+let val;
+
+const today = new Date();
+const birthday = new Date('1-15-1997');
+
+val = birthday;
+val = today.getMonth();
+val = today.getDay();
+val = today;
+val = today.getTime();
+
+
+console.log(val);
+
+Chapter 2 Lesson 11 (if)
+similar to any C language 
+// === checks value and type use this most of the time !==
+
+Chapter 2 Lesson 12 (switches)
+const color  = 'jeff';
+
+switch(color){
+    case 'red':
+        console.log("color is red");
+        break;
+    case 'blue':
+        console.log("color is blue");
+        break;
+
+    default:
+        console.log("color is not red or blue");
+        break;
+}
+
+Chapter 2 Lesson 13 (function declaration and expression)
+function greet(){
+    console.log("hey nerd");
+
+}
+
+const square = function(x){ 
+    return x*x;
+};
+
+//console.log(square(8));
+
+//Immediately invove function expression - IIFEs
+//invoke an run at the same time
+
+(function(name){
+    console.log(name +  " is super cool")
+})("Matt");
+
+//we can put functions inside of an object (a method)
+const todo = {
+    add: function(){
+        console.log('Add todo..');
+    },
+    edit: function(id){
+        console.log(`edit todo ${id}`);
+    }
+}
+
+todo.add();
+todo.edit(22);
+
+Chapter 2 Lesson 13 (general loops)
+exact same is java
+except 
+for(let x in user)
+instead of for (int x : user)
+
+
