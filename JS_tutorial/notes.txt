@@ -381,5 +381,3 @@ for(let x = 0; x < 10; x++){
 }
 
 console.log("Global scope ", a, b, c, x);
-
-CHAPTER 3 LESSON 1 (What is the DOM?)

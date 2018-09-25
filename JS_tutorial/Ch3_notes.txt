@@ -1,0 +1,357 @@
+CHAPTER 3 LESSON 2 (Document Object)
+let val;
+
+val = document;
+val = document.all;
+val = document.all.length;
+val = document.characterSet;
+
+val = document.links[0];
+
+console.log(val);
+
+CHAPTER 3 LESSON 3 (DOM selector for single elements)
+// console.log(document.getElementById('task-title'));
+
+// //get things from the element
+// console.log(document.getElementById('task-title').className);
+
+// //Change styling
+// document.getElementById('task-title').style.background = '#333';
+// document.getElementById('task-title').style.color = '#fff';
+// document.getElementById('task-title').style.padding = '5px';
+
+// //Change content
+// document.getElementById('task-title').textContent = "Task List";
+// document.getElementById('task-title').innerText = "My Tasks";
+// document.getElementById('task-title').innerHTML = '<span style="color:red">Task List</span>';
+
+// //doing this is very ineffeicient we should make this a variable
+
+// const taskTitle = document.getElementById('task-title');
+// //now edit the variable with the styling
+// taskTitle.style.background = '#333';
+// taskTitle.style.color = '#fff';
+// taskTitle.style.padding = '5px';
+
+//document.querySelector()
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
+
+//this only works for 1 element
+document.querySelector('ul li').style.color = 'blue';
+document.querySelector('li:last-child').style.color = 'blue';
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+
+CHAPTER 3 LESSON 3 (selector for multiple elements)
+//documents.getElementsByClassName
+
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[0].style.background = "#eee";
+
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+// console.log(listItems);
+
+//document.getElementsByTagName
+const items = document.getElementsByTagName('li');
+//console.log(items);
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[0].style.background = "#eee"
+
+//html isnt an array so array methods will not work on variables holding multiple html elements
+//items.reverse() will not work
+
+//convert html collection to array
+ lis = Array.from(items);
+// lis.reverse();
+
+// lis.forEach(function(li, index){
+//     li.style.color = "#bbb";
+//     li.textContent = `${index + 1}:  Hello`;
+//     console.log(li.className);
+// });
+
+//document.querySelectorAll
+const item = document.querySelectorAll('ul.collection li.collection-item')
+
+item.forEach(function(item, index){
+    item.style.color = "#eee";
+    item.textContent = `${index + 1}:  Hello`;
+    console.log(item.className);
+ });
+
+//to target the even or odd element select them and then iterate over them
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+
+console.log(item);
+
+CHAPTER 3 LESSON 4 (Traversing the DOM)
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+//get child nodes
+val = list.childNodes;
+
+//get children element nodes returns and html collection
+val = list.children;
+val = list.childNodes[3].nodeType;
+
+//1 element
+//3 text node
+
+console.log(val);
+
+CHAPTER 3 LESSON 5 (Creating Elements)
+//Create element
+const li = document.createElement('li');
+
+//add class
+li.className = 'collection-item';
+
+//add id
+li.id = 'new-item';
+
+//add attribute
+li.setAttribute('title', 'New Item');
+
+//create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+//create new link element
+const link = document.createElement('a');
+
+//add classes
+link.className = "delete-item secondary-content";
+
+//add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+//append link to li
+li.appendChild(link);
+
+//append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
+
+CHAPTER 3 LESSON 6 (removing and replacing elements)
+//replace elements
+
+    //create emement
+    const newHeading = document.createElement('h2');
+
+    //add id
+    newHeading.id = 'task-title';
+
+    //new text node
+    newHeading.appendChild(document.createTextNode('Task List'));
+
+    //get the old heading
+    const oldHeading = document.getElementById('task-title');
+
+    //parent
+    const ca = document.querySelector('.card-action');
+
+    //replace
+    ca.replaceChild(newHeading, oldHeading);
+
+//remove element
+    const lis  = document.querySelectorAll('li');
+    const list = document.querySelector('ul');
+
+    //remove list item
+    lis[0].remove();
+
+    //Remove Child element 
+    list.removeChild(lis[3]);
+
+//classes and attributes
+
+    const fli = document.querySelector('li:first-child');
+    const link = fli.children[0];
+
+    let val;
+
+    //classes
+    val = link.className;
+    val = link.classList;
+
+    //attributes
+    val = link.getAttribute('href');
+    //edit attribute
+    val = link.setAttribute('href', 'https://google.com');
+    //check if it had attribute .hasAttribute
+
+
+    console.log(val);
+
+CHAPTER 3 LESSON 7 (event listeners and the event object)
+// document.querySelector('.clear-tasks').addEventListener('click',
+// function(e){
+//     console.log('hi');
+
+//     e.preventDefault();
+// } );
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+    //console.log('Clicked');
+
+    let val; 
+
+    val = e;
+
+    //event target element
+    // val = e.target;
+    // val = e.target.id;
+    // val = e.target.classList;
+
+    //cordinates realitive to window
+    val = e.clientY;
+
+    //cordinats reatlitve to element
+    val = e.offsetY;
+
+    e.target.innerText = "hiiii";
+
+    console.log(val);
+}
+
+CHAPTER 3 LESSON 8 (mouse events)
+const clr = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+//click
+clr.addEventListener('click', runEvent);
+
+//double click
+clr.addEventListener('dblclick', runEvent);
+
+card.addEventListener('mousemove', runEvent);
+
+//event handler
+function runEvent(e) {
+    //console.log(`MouseX: ${e.offsetX} MouseY: ${e.offsetY}`);
+    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
+
+CHAPTER 3 LESSON 9 (keyboard and input events)
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+
+//form.addEventListener('submit', runEvent);
+
+taskInput.value = '';
+
+
+//taskInput.addEventListener('keydown', runEvent);
+taskInput.addEventListener('input', runEvent);
+
+function  runEvent(e){
+    console.log(`Event Type: ${e.type}`);
+
+    //heading.innerText = e.target.value;
+
+    console.log(e.target.value);
+    //e.preventDefault();
+}
+
+CHAPTER 3 LESSON 10 (Event Bubbling and delegation)
+//event bubbling
+//all of these run when title is clicked cause they are parents to title
+// document.querySelector('.card-title').addEventListener('click', 
+// function(){
+//     console.log('card title');
+// })
+
+// document.querySelector('.card-content').addEventListener('click', 
+// function(){
+//     console.log('card content');
+// })
+
+// document.querySelector('.card').addEventListener('click', 
+// function(){
+//     console.log('card');
+// })
+
+// document.querySelector('.col').addEventListener('click', 
+// function(){
+//     console.log('col');
+// })
+
+//Event deligation
+// const del = document.querySelector('.delete-item');
+// del.addEventListener('click', delitm);
+
+//if only one of them work when testing it you need event delegation
+//or for something that wasent there when the page loaded
+
+document.body.addEventListener('click', delitm);
+
+function delitm(e){
+    // if(e.target.parentElement.className === 'delete-item secondary-content'){
+    //     console.log('delete item');
+    // }
+
+    if(e.target.parentElement.classList.contains('delete-item')){
+        e.target.parentElement.parentElement.remove();
+        console.log('delete item');
+    }
+}
+CHAPTER 3 LESSON 11
+// //set local storage item
+// localStorage.setItem('name', 'john');
+
+// //set session storage item goes away after closing browser
+// localStorage.setItem('name', 'joe');
+
+//remove from storage
+//localStorage.removeItem('name');
+
+//get from storage
+//const name = localStorage.getItem('name')
+
+//form to add to local storage
+document.querySelector('form').addEventListener('submit',
+function(e){
+    const task = document.getElementById('task').value;
+
+    let tasks; 
+
+    if(localStorage.getItem('tasks') === null){ 
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.push(task);
+
+
+
+    localStorage.setItem('task', JSON.stringify(tasks));
+    alert('task saved');
+
+    e.preventDefault();
+});
+
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+tasks.forEach(function(task){
+    console.log(task);
+});
