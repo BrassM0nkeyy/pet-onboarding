@@ -1,0 +1,56 @@
+body {
+    background-color: #c96567;
+}
+
+.content {
+    overflow: auto;
+    margin: 5% 5% 5% 5%;
+    padding: 1% 10% 10% 10%;
+    background-color: #314455;
+    color: white;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+.title {
+    font-size: 72px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 64px;
+}
+
+label {
+    font-size: 24px;
+}
+
+.p1 {
+    float: left;
+}
+
+.p2 {
+    float: right;
+}
+
+.bbox {
+    display: inline-block;
+    background-color: #644E5B;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2% 5% 2% 5%;
+}
+
+a {
+    font-size: 18px;
+    color:  inherit;
+    text-decoration: none;
+}
+
+
