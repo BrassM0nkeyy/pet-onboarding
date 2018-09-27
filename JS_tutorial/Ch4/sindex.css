@@ -53,4 +53,11 @@ a {
     text-decoration: none;
 }
 
+.num {
+    clear: both;
+    font-size: 175px;
+    padding-top: 10%;
+    margin-bottom: 1%;
+}
+
 
